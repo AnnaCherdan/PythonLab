@@ -3,7 +3,7 @@
 # <class 'float'>
 # <class 'complex'>
 # <class 'str'>
-# <class 'list'>
+# <class 'list'()>
 # <class 'tuple'>
 # <class 'set'>
 # <class 'dict'>

@@ -24,4 +24,4 @@ ann.insert(7, 'профи')
 print(ann)
 print('-' * 20)
 
-ann.pop([i])
+# ann.pop([i])

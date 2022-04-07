@@ -7,3 +7,15 @@ handle = open("pup.txt", "r")
 data = handle.read()
 print(data)
 handle.close()
+print('-' * 20)
+
+handle = open("pup.txt", "r")
+data = handle.readline(35) # Читает только первую строку. В скобках можно указать количество симолов к возвоату
+print(data)
+handle.close()
+print('-' * 20)
+
+handle = open("pup.txt", "r")
+data = handle.readlines() # Считывает все линии в виде списка методом readlines().
+print(data)
+handle.close()

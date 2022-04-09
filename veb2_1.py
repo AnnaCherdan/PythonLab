@@ -49,4 +49,4 @@ print(int(c))
 # n = input('Введите любой текст: ').split('f')
 # print(len(n))
 
-1-00
+

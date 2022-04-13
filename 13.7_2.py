@@ -54,3 +54,11 @@ for r in range(heads + 1):  # количество кроликов
             print("Количество кроликов", r)
             print("Количество фазанов", ph)
             print("---")
+a = "foo"
+b = "bar"
+
+print(1 and a or b)
+a = ""
+b = "bar"
+
+print(1 and a or b)

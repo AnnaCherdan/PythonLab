@@ -119,7 +119,7 @@ print(adder(1, 2, 3))  # 6, 1 + 2 + 3
 print('My BAD Var')
 
 
-def many_n(*nums):    #  * - все "нумсы"
+def many_n(*nums):    #  * - args все "нумсы"
     pr = 0  # Умножь на 0 и получишь 0!
     for n in nums:
         pr *= n

@@ -91,16 +91,24 @@ with open('The Joyful Corpse.txt') as bodler:
 
 # пользователь вводит произвольное целое число, а программа читает некий русский текст из файла
 # и зашифровывает его в другой файл со сдвигом, соответствующим этому числу.
-# alphaUp = list(map(str.upper, alpha))
-# print(alphaUp)
+alpha = 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
+alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ'
+alphaUp = list(map(str.upper, alpha))
+print(type(alphaUp))
+alphaUp = str(alphaUp)
+print(alphaUp)
+print(type(alphaUp))
+print(*alphaUp)
 # print(type(alphaUp))
+
 # alphaUp = str(*alpha) BAD Var
 # print(type(alphaUp))
 # print(*alphaUp)
 # alpha = 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
 # alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ'
 # number = int(input('Введите число, на которое нужно сдвинуть текст: '))
-#
+# alphaUp = list(map(str.upper, alpha))
+# alphaUp = str(alphaUp)
 # summary = ''
 #
 #
@@ -116,7 +124,7 @@ with open('The Joyful Corpse.txt') as bodler:
 # with open('alpha.txt', encoding="utf8") as myfile:
 #     for line in myfile:
 #         for char in line:
-#             summary += changeChar(char)
+#             summary += str.changeChar(char)
 #
 #
 # with open('output.txt', 'w', encoding="utf8") as myfile:
@@ -143,26 +151,26 @@ with open('The Joyful Corpse.txt') as bodler:
 # Собираем из изменённых символов текст в переменную summary.
 # Открываем на запись другой файл и записываем туда эту переменную.
 #, encoding="utf8"
-alpha = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-number = int(input('Введите число, на которое нужно сдвинуть текст: '))
-
-summary = ''
-
-
-def changeChar(char):
-    if char in alpha:
-        return alpha[(alpha.index(char) + number) % len(alpha)]
-    elif char in alphaUp:
-        return alphaUp[(alphaUp.index(char) + number) % len(alphaUp)]
-    else:
-        return char
-
-
-with open("alpha.txt", encoding="utf8") as myFile:
-    for line in myFile:
-        for char in line:
-            summary += changeChar(char)
-
-with open("output.txt", 'w', encoding="utf8") as myFile:
-    myFile.write(summary)
+# alpha = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+# alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+# number = int(input('Введите число, на которое нужно сдвинуть текст: '))
+#
+# summary = ''
+#
+#
+# def changeChar(char):
+#     if char in alpha:
+#         return alpha[(alpha.index(char) + number) % len(alpha)]
+#     elif char in alphaUp:
+#         return alphaUp[(alphaUp.index(char) + number) % len(alphaUp)]
+#     else:
+#         return char
+#
+#
+# with open("alpha.txt", encoding="utf8") as myFile:
+#     for line in myFile:
+#         for char in line:
+#             summary += changeChar(char)
+#
+# with open("output.txt", 'w', encoding="utf8") as myFile:
+#     myFile.write(summary)

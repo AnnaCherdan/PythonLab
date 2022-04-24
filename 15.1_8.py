@@ -91,38 +91,36 @@ with open('The Joyful Corpse.txt') as bodler:
 
 # пользователь вводит произвольное целое число, а программа читает некий русский текст из файла
 # и зашифровывает его в другой файл со сдвигом, соответствующим этому числу.
-
-alpha = 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
 # alphaUp = list(map(str.upper, alpha))
 # print(alphaUp)
 # print(type(alphaUp))
 # alphaUp = str(*alpha) BAD Var
 # print(type(alphaUp))
 # print(*alphaUp)
-
-alphaUpA = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ'
-number = int(input('Введите число, на которое нужно сдвинуть текст: '))
-
-summary = ''
-
-
-def changeСhar(char):
-    if char in alpha:
-        return [(alpha.index(char) + number) % len(alpha)]
-    elif char in alphaUpA:
-        return [(alphaUpA.index(char) + number) % len(alphaUpA)]
-    else:
-        return char
-
-
-with open('alpha.txt') as myfile:
-    for line in myfile:
-        for char in line:
-            summary += changeСhar(char)
-
-
-with open('output.txt', 'w') as myfile:
-    myfile.write(summary)
+# alpha = 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
+# alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ'
+# number = int(input('Введите число, на которое нужно сдвинуть текст: '))
+#
+# summary = ''
+#
+#
+# def changeChar(char):
+#     if char in alpha:
+#         return [(alpha.index(char) + number) % len(alpha)]
+#     elif char in alphaUp:
+#         return [(alphaUp.index(char) + number) % len(alphaUp)]
+#     else:
+#         return char
+#
+#
+# with open('alpha.txt', encoding="utf8") as myfile:
+#     for line in myfile:
+#         for char in line:
+#             summary += changeChar(char)
+#
+#
+# with open('output.txt', 'w', encoding="utf8") as myfile:
+#     myfile.write(summary)
 
 # Разберём этот код
 # В первых двух строчках задаем алфавит, по которому будем ходить. Так как символы в верхнем и нижнем регистре отличаются, а мы не хотим, чтобы шифр ломал регистр, то задается два алфавита.
@@ -144,4 +142,27 @@ with open('output.txt', 'w') as myfile:
 # В итоге функция возвращает либо неизменный символ, если это не буква русского алфавита, либо символ смещённый.
 # Собираем из изменённых символов текст в переменную summary.
 # Открываем на запись другой файл и записываем туда эту переменную.
-#
+#, encoding="utf8"
+alpha = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+alphaUp = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+number = int(input('Введите число, на которое нужно сдвинуть текст: '))
+
+summary = ''
+
+
+def changeChar(char):
+    if char in alpha:
+        return alpha[(alpha.index(char) + number) % len(alpha)]
+    elif char in alphaUp:
+        return alphaUp[(alphaUp.index(char) + number) % len(alphaUp)]
+    else:
+        return char
+
+
+with open("alpha.txt", encoding="utf8") as myFile:
+    for line in myFile:
+        for char in line:
+            summary += changeChar(char)
+
+with open("output.txt", 'w', encoding="utf8") as myFile:
+    myFile.write(summary)

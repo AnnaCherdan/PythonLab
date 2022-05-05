@@ -117,3 +117,38 @@ print(list(filter(lambda elem: elem < 5, a)))  # воспользоваться 
                                                # которая фильтрует элементы согласно заданному условию.
 print('MOST GOOD VAR')
 print([elem for elem in a if elem < 5])
+
+
+# Даны списки:
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# Нужно вернуть список, который состоит из элементов, общих для этих двух списков.
+print('My BAD VAR') # Склеила списки, но оставила все элементы, только убрав дубликаты.
+c = a + b
+print(list(set(c)))
+
+print('Other VAR')
+result = list(filter(lambda elem: elem in b, a))
+print(result)
+
+# ИЛИ списковым включением:
+result = [elem for elem in a if elem in b]
+print(result)
+
+# привести оба списка к множествам и найти их пересечение:
+result = list(set(a) & set(b))
+print(result)
+
+# Отсортируйте словарь по значению в порядке возрастания и убывания.
+
+# a = {'b':'1', 'c':'2', 'd':'3', 'f':'4'}
+# print(sorted(values))
+
+
+
+
+
+
+
+
+

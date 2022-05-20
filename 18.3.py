@@ -39,7 +39,7 @@ bot = telebot.TeleBot("5394587224:AAEuqvPVk6WuVh5wfIHpdLrDUE0OEDdDl6M")
 #
 #         bot.polling(none_stop=True)
 
-print(a.text)
+# print(a.text)
 # обработчик, который на сообщения с фотографией будет отвечать сообщением «Nice meme XDD».
 # Бот должен отвечать не отдельным сообщением, а с привязкой к картинке.
 

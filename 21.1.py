@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def sum(a, b):
     return a + b
 
@@ -81,4 +84,34 @@ my_decor = my_decorator(my_first_decorator)
 print(my_decor())
 # print(my_decorator()) # Ошибка. Нет функции, как аргумента функции.
 
+def working_hours(func):
+    def wrapper():
+        if 9 <= datetime.now().hour < 18:
+            func()
+        else:
+            pass  # Нерабочее время, выходим
+    return wrapper
 
+def writing_tests():
+    print("Я пишу тесты на python!")
+
+writing_tests = working_hours(writing_tests)
+
+print(writing_tests())
+
+
+def my_decorator(func):
+    def wrapper():
+        print("Начало выполнения функции.")
+        func()
+        print("Конец выполнения функции.")
+
+    return wrapper
+
+
+@my_decorator
+def my_first_decorator():
+    print("Это мой первый декоратор!")
+
+
+print(my_first_decorator())

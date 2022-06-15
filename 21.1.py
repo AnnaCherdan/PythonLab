@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from decorator import do_twice
 
 def sum(a, b):
     return a + b
@@ -115,3 +115,7 @@ def my_first_decorator():
 
 
 print(my_first_decorator())
+
+@do_twice
+def test_twice():
+    print("Это вызов функции test_twice!")

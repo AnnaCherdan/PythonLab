@@ -116,6 +116,6 @@ def my_first_decorator():
 
 print(my_first_decorator())
 
-@do_twice
-def test_twice():
-    print("Это вызов функции test_twice!")
+# @do_twice
+# def test_twice():
+#     print("Это вызов функции test_twice!")

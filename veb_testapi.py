@@ -13,4 +13,4 @@ class TestAPI:
         print(response.status_code)
         print(json.dumps(response.text, indent=4, sort_keys=True))
 
-19-50 Вебинар-практикум по автоматизированному тестированию 24.01.2022
+# 19-50 Вебинар-практикум по автоматизированному тестированию 24.01.2022

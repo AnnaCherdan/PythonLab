@@ -1,4 +1,5 @@
 import pytest
+from conf import param_test
 
 
 def strange_string_funk(str):
@@ -8,15 +9,6 @@ def strange_string_funk(str):
         return str + '!'
     else:
         return str + '.'
-
-
-@pytest.fixture(scope='function', params=[
-    ('abcdefg', 'abcdefg?'),
-    ('abc', 'abc!'),
-    ('abcde', 'abcde.')
-])
-def param_test(request):
-    return request.param
 
 
 def test_strange_string_funk(param_test):

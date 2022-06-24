@@ -10,7 +10,7 @@
 # '+' - Открытие на чтение и дозапись, информация добавляется в конец файла.
 import struct
 
-handle = open("pup.txt", "r")
+handle = open("../pup.txt", "r")
 data = handle.read()
 print(data)
 handle.close()
@@ -23,7 +23,7 @@ print('-' * 20)
 # Метод read() — сохраняет всё содержимое файла как строку.
 # Если в метод read() передать число, то вернётся указанное число символов.
 
-handle = open("pup.txt", "r")
+handle = open("../pup.txt", "r")
 data = handle.readline(15)
 print(data)
 handle.close()
@@ -35,37 +35,37 @@ print('-' * 20)
 # ещё одно — третью строку и так далее.
 
 # Метод readlines() вернёт список, в котором элементами будут строки из файла.
-handle = open("pup.txt", "r")
+handle = open("../pup.txt", "r")
 data = handle.readlines(1)
 print(data)
 handle.close()
 print('-' * 20)
-handle = open("pup.txt", "r")
+handle = open("../pup.txt", "r")
 data = handle.readlines()
 print(data)
 handle.close()
 print('-' * 20)
 
-handle = open("pup.txt", "r")
+handle = open("../pup.txt", "r")
 for line in handle:
     print(line)
 
-mychast = open('Частушка.txt', 'rt')
+mychast = open('../Частушка.txt', 'rt')
 data = mychast.read()
 mychast.close()
 print(data)
 
-mychast = open('Частушка.txt', 'rt')
+mychast = open('../Частушка.txt', 'rt')
 for line in mychast:
     print(line)
 mychast.close()
 # ЗАПИСЬ В ФАЙЛ.
 # два способа записи информации в файл — это метод write() и функция print().
-mychast = open('Частушка.txt', 'w')
+mychast = open('../Частушка.txt', 'w')
 mychast.write('И тут я стукнул сапожищем!')
 print(mychast)
 
-bodler = open('The Joyful Corpse.txt', 'rt')
+bodler = open('../The Joyful Corpse.txt', 'rt')
 for line in bodler:
     print(line)
 bodler.close()
@@ -81,7 +81,7 @@ bodler.close()
 #         Двоеточие.
 #         Блок кода, отделенный четырьмя пробелами, по аналогии с циклами и функциями.
 
-with open('The Joyful Corpse.txt') as bodler:
+with open('../The Joyful Corpse.txt') as bodler:
     for line in bodler:
         print(line)
 

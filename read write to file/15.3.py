@@ -10,7 +10,7 @@
 
 import json
 
-with open('json_example.json', encoding="utf8") as f:
+with open('../json_example.json', encoding="utf8") as f:
     templates = json.load(f)
 print(templates)
 print(type(templates))
@@ -19,7 +19,7 @@ print(type(templates))
 
 import json
 
-with open('json_example.json', encoding='utf8') as f:
+with open('../json_example.json', encoding='utf8') as f:
     strfile = f.read()
     templates = json.loads(strfile)
 
@@ -57,8 +57,8 @@ template = {
     'spouse': None
 }
 
-with open('to_json_example.json', 'w', encoding='utf8') as f:
+with open('../to_json_example.json', 'w', encoding='utf8') as f:
     json.dump(template, f, ensure_ascii=False, indent=4)
 
-with open('to_json_example.json', encoding='utf8') as f:
+with open('../to_json_example.json', encoding='utf8') as f:
     print(f.read())

@@ -1,12 +1,12 @@
 import os # Модуль os в Python содержит функции и методы для работы с операционной системой. Большая часть из них работает во всех системах одинаково. В этом модуле в данном контексте нас интересует вложенный
           # в него модуль os.path, предназначенный для работы с путями.
-pp = os.path.join('output.txt')
+pp = os.path.join('../output.txt')
 myfile = open(pp, encoding="utf8")
 print(myfile.read())
 
 # The Joyful Corpse
 
-pp = os.path.join('The Joyful Corpse.txt')
+pp = os.path.join('../The Joyful Corpse.txt')
 myfile = open(pp)
 print(myfile.read())
 print('-' * 20)
@@ -66,7 +66,7 @@ def printPath(pathArr, finPoint):
 
 
 labirint = []
-with open("labirint.txt") as myFile:
+with open("../labirint.txt") as myFile:
     for line in myFile:
         labirint.append(line.replace('\n', '').split(' '))
 

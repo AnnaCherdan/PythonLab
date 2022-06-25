@@ -27,4 +27,3 @@ def test5():
 
 def test6():
     assert 1 in [1, 2, 3]
-31-30

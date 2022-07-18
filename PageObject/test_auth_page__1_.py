@@ -9,6 +9,6 @@ def test_auth_page(selenium):
    page.btn_click()
 
    #знак != или == будет зависеть от того, верные или неверные данные мы вводим
-    assert page.get_relative_link() != '/all_pets', "login error"
+   assert page.get_relative_link() != '/all_pets', "login error"
 
    time.sleep(5) #задержка для учебных целей
